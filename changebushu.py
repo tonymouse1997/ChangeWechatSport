@@ -7,9 +7,9 @@ headers = {
  
 user = ''
 password = ''
-# step = ''
-step = str(randint(10121, 12302))
- 
+step = '13211'
+# step = str(randint(10121, 12302))
+
 def get_code(location):
     code_pattern = re.compile("(?<=access=).*?(?=&)")
     code = code_pattern.findall(location)[0]
