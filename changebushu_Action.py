@@ -32,6 +32,7 @@ def login(user, password):
     print("access_code获取成功")
  
     url2 = "https://account.huami.com/v2/client/login"
+    third_name = 'huami_phone' if '+86' in user else 'email'
     data2 = {
         "app_name": "com.xiaomi.hm.health",
         "app_version": "4.6.0",
@@ -40,7 +41,7 @@ def login(user, password):
         "device_id": "2C8B4939-0CCD-4E94-8CBA-CB8EA6E613A1",
         "device_model": "phone",
         "grant_type": "access_token",
-        "third_name": "huami_phone",
+        "third_name": third_name,
     }
     r2 = requests.post(url2, data=data2, headers=headers).json()
     login_token = r2["token_info"]["login_token"]
