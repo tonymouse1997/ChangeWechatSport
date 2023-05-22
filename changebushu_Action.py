@@ -109,7 +109,6 @@ if __name__ == "__main__":
         user = eval(os.environ['USER_PHONE'])[i]
         password = eval(os.environ['USER_PWD'])[i]
         print(user, password)
-        step = str(randint(int(os.environ['STEP_MIN']), int(os.environ['STEP_MAX'])))
-        # step = os.environ['STEP']
-        # step = str(randint(10123, 12302)) 
+        # step = str(randint(int(os.environ['STEP_MIN']), int(os.environ['STEP_MAX'])))
+        # step = '12345'
         main()
